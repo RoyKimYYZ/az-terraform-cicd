@@ -18,3 +18,5 @@ override.tf.json
 *.p12
 *.cer
 *.crt
+
+license.txt
