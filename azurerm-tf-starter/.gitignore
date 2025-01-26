@@ -19,4 +19,4 @@ override.tf.json
 *.cer
 *.crt
 
-license.txt
+LICENSE.txt
