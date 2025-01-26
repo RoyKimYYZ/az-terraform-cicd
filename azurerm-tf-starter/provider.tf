@@ -12,11 +12,13 @@ terraform {
   # comment out backend block to use local state file
   # to use remote state file, uncomment backend block and create storage account and container and populate the values
   # access to this storage account is through your Azure CLI login
+  
   #backend "azurerm" {
-  # resource_group_name = "enterprise" # resource group in which the storage account
-  # storage_account_name = "rkimstorage"
-  # container_name = "tfstate"
-  # key = "terraform.tfstate"
+    # resource_group_name = "enterprise" # resource group in which the storage account
+    # storage_account_name = "rkimstorage"
+    # container_name = "tfstate"
+    # key = "terraform.tfstate"
+    # use_azuread_auth     = true
   #}
 }
 # Azure Providers
@@ -27,4 +29,6 @@ provider "azurerm" {
   #   client_secret = ""
   #   tenant_id = "12345678"
   features {}
+
+
 }

@@ -20,11 +20,11 @@ output "random_string_result" {
 }
 
 output "storage_account_name" {
-  value = azurerm_storage_account.storage_account.name
+  value = azurerm_storage_account.sa.name
 }
 
-output storage_account_container {
-  value = azurerm_storage_container.container.name
-}
+# output storage_account_container {
+#   value = azurerm_storage_container.container.name
+# }
 
 
