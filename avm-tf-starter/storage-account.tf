@@ -4,11 +4,12 @@ module "avm-res-storage-storageaccount" {
   resource_group_name = var.resource_group_name
   location = var.location
   name = var.name
-  public_network_access_enabled = true
-  shared_access_key_enabled = true
-  allow_nested_items_to_be_public = true
-  network_rules = {
-    default_action = "Allow" 
+  #shared_access_key_enabled = var.shared_access_key_enabled
+  containers = {
+    container1 = {
+      name = var.container_name,
+      public_access = "Container"
+    }
   }
   depends_on = [ azurerm_resource_group.rg ]
 }

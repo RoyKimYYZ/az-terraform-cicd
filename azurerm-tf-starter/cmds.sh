@@ -30,5 +30,3 @@ terraform destroy
 
 terraform fmt # Format your configuration. Terraform will print out the names of the files it modified, if any.
 terraform show # Show the current state of your infrastructure. This will output the current state of your infrastructure in a human-readable format.
-
-terraform plan   -var-file="dev.tfvars" -out out.plan 

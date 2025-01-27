@@ -37,16 +37,12 @@
 
 # STORAGE ACCOUNT
 
-
-
-variable "log_analytics_workspace_name" {
-  default = "testLogAnalyticsWorkspaceName"
+variable container_name {
+  default = "blobcontainer1"
+  type    = string
 }
 
-# refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
-variable "log_analytics_workspace_location" {
-  default = "eastus"
-}
+
 
 variable "client_id" {
   default = ""
