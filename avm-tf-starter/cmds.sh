@@ -8,8 +8,8 @@ az account show -o table
 terraform init #-backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=codelab.microsoft.tfstate"
 terraform plan -var-file="dev.tfvars" -out out.plan
 terraform apply out.plan
-# altenative to the above 2 commands
-terraform apply -var-file="dev.tfvars"
+# altenative to run with out terraform plan
+terraform apply -var-file="dev.tfvars" -auto-approve
 
 terraform destroy -auto-approve -var-file="dev.tfvars"
 
