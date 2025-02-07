@@ -35,23 +35,4 @@ variable "location" {
 }
 
 
-# STORAGE ACCOUNT
-
-
-
-variable "log_analytics_workspace_name" {
-  default = "testLogAnalyticsWorkspaceName"
-}
-
-# refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
-variable "log_analytics_workspace_location" {
-  default = "eastus"
-}
-
-variable "client_id" {
-  default = ""
-}
-variable "client_secret" {
-  default = ""
-}
 

@@ -16,7 +16,6 @@ terraform validate
 terraform plan -var-file="dev.tfvars" -out out.plan
 # To apply the changes required to reach the desired state of the configuration.
 terraform apply out.plan
-
 # Alternative to the above. 
 # To create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files.
 terraform apply -var-file="dev.tfvars" -auto-approve
