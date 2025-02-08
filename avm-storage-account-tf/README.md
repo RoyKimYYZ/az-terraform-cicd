@@ -1,7 +1,7 @@
 ### Objectives
 
-*Scenario: Deploy a storage account with a blob container.
-*Simple example demonstrating the user of an Azure Verified Module for the beginner.
+* Scenario: Deploy a storage account with a blob container.
+* Simple example demonstrating the user of an Azure Verified Module for the beginner.
 
 Resources
 * https://azure.github.io/Azure-Verified-Modules/indexes/terraform/tf-resource-modules/ - AVM website with the list of AVM resource modules including the storage account
