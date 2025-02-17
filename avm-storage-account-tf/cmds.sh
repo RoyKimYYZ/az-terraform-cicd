@@ -11,6 +11,9 @@ terraform apply out.plan
 # altenative to run with out terraform plan
 terraform apply -var-file="dev.tfvars" -auto-approve
 
+terraform apply -var-file="dev-publicnetworkaccess.tfvars" -auto-approve
+
+
 terraform destroy -auto-approve -var-file="dev.tfvars"
 
 terraform fmt # Format your configuration. Terraform will print out the names of the files it modified, if any.

@@ -4,9 +4,12 @@ module "avm-res-storage-storageaccount" {
   resource_group_name = var.resource_group_name
   location = var.location
   name = "${var.storage_account_name}${random_string.random_name.id}"
-  public_network_access_enabled = true # this also enables access to blob containers from the internet
+  public_network_access_enabled = var.public_network_access_enabled # this also enables access to blob containers from the internet
+  network_rules = var.network_rules
+  
   shared_access_key_enabled = var.shared_access_key_enabled # NOTE: This is required for the storage account to be accessible from the internet. Otherwise error: KeyBasedAuthenticationNotPermitted: Key based authentication is not permitted on this storage account.
   # Otherwise error: Storage Account Name: "rkimstorageavm") to become available: waiting for the Blob Service to become available: polling failed: executing request: unexpected status 403 (403 Key based authentication is not permitted on this storage account.) with KeyBasedAuthenticationNotPermitted: Key based authentication is not permitted on this storage account.
+  
   containers = {
     container1 = {
       name = var.container_name

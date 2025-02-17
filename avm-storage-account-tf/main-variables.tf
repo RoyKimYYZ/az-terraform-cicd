@@ -55,6 +55,27 @@ variable public_network_access_enabled {
   type    = bool
 }
 
+variable network_rules {
+  default = {}
+  type = object({
+    bypass                     = optional(set(string), ["AzureServices"])
+    default_action             = optional(string, "Deny") # Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
+    ip_rules                   = optional(set(string), [])
+    virtual_network_subnet_ids = optional(set(string), [])
+    private_link_access = optional(list(object({
+      endpoint_resource_id = string
+      endpoint_tenant_id   = optional(string)
+    })))
+    timeouts = optional(object({
+      create = optional(string)
+      delete = optional(string)
+      read   = optional(string)
+      update = optional(string)
+    }))
+  })
+}
+
+
 variable "client_id" {
   default = ""
 }
