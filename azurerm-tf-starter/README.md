@@ -3,7 +3,7 @@
 
 ### Objectives
 
-This project is sample code for those who are beginners to Terraform for Azure and as a quick reference. There are many ways to structure a terraform project in your repo, but I just want to show and explain my code. The starter project sample is suited for
+This project is sample code for those who are beginners to Terraform for Azure and can be used as a quick reference. There are many ways to structure a terraform project in your repo, but I just want to show and explain my code. The starter project sample is suited for
 
 solo engineer/developer
 non collaborative
