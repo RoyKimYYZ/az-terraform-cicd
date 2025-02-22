@@ -13,4 +13,3 @@ terraform.rc
 **/.terraform/*
 avm-tf-starter/.terraform/*
 azurerm-tf-starter/.terraform/*
-aks-project/.terraform/*
