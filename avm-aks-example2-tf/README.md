@@ -1,4 +1,4 @@
-This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) for AKS. 
+This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) for [Azure Kubernetes Service](https://registry.terraform.io/modules/Azure/avm-res-containerservice-managedcluster/azurerm/latest), [Log Analytics Workspace](https://registry.terraform.io/modules/Azure/avm-res-operationalinsights-workspace/azurerm/latest) and [Azure Container Registry](https://registry.terraform.io/modules/Azure/avm-res-containerregistry-registry/azurerm/latest).
 
 
 * Given a resource group, an Azure Kubernetes Cluster is deployed.
@@ -20,3 +20,4 @@ Azure Container Registry - Diagnostic Settings
 ![alt text](acr-diag-portal.png)
 
 
+Find Terraform AVM Resource Modules [here](https://azure.github.io/Azure-Verified-Modules/indexes/terraform/tf-resource-modules/)
