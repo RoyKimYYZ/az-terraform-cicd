@@ -1,9 +1,18 @@
-To get started on the Azure Verified Modules (AVM) for AKS I demonstrate a series of examples from most simplest to more sophisticated scenarios. The AVM module is called `avm-res-containerservice-managedcluster` This wil help get more familiar with using AVM modules for AKS.
+This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) for [Azure Kubernetes Service](https://registry.terraform.io/modules/Azure/avm-res-containerservice-managedcluster/azurerm/latest), [Log Analytics Workspace](https://registry.terraform.io/modules/Azure/avm-res-operationalinsights-workspace/azurerm/latest) and [Azure Container Registry](https://registry.terraform.io/modules/Azure/avm-res-containerregistry-registry/azurerm/latest).
 
-| Code Sample | Description |
-| ------ | ----------- |
-| __[avm-res-containerservice-managedcluster-simple](https://github.com/RoyKimYYZ/az-terraform-cicd/blob/main/avm-aks-tf/avm-res-containerservice-managedcluster-simple.tf)__   |  
 
-## Design
+* Given a resource group, an Azure Kubernetes Cluster is deployed.
+* A Log Analytics workspace is used to collect metrics and logs from both the AKS resource and Azure Container resource. The diagnostic settings of each resource is configured to refernce the log analytics workspace
 
-## Deployment Outcome
+![aks-law-acr-diagram](aks-law-tf-design.png)
+
+## Azure Portal Deployment
+
+Resource Group
+![alt text](aks-law-acr-rg-portal.png)
+
+Azure Kubernetes Service - Diagnostic Settings
+![alt text](aks-law-diag-portal.png)
+
+
+Find Terraform AVM Resource Modules [here](https://azure.github.io/Azure-Verified-Modules/indexes/terraform/tf-resource-modules/)
