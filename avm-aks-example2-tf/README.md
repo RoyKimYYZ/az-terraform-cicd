@@ -6,6 +6,8 @@ This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) 
   * The role assignment from the AKS cluster to the container registry uses the ACR Pull role.
 * A Log Analytics workspace is used to collect metrics and logs from both the AKS resource and Azure Container resource. The diagnostic settings of each resource is configured to refernce the log analytics workspace
 
+The terraform code is taken from https://registry.terraform.io/modules/Azure/avm-res-containerservice-managedcluster/azurerm/latest/examples/default
+
 ![aks-law-acr-diagram](aks-law-acr-tf.png)
 
 ## Azure Portal Deployment
