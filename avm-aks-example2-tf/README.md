@@ -1,7 +1,10 @@
-This IAC deployment scenario is centered aroudn The Azure Verified Modules(AVM) for AKS. 
+This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) for AKS. 
 
 
-Given a resource group, an Azure Kubernetes Cluster is deployed. Azure Container Registry(ACR) so that AKS can pull docker images for any application that may be deployed into the AKS cluster. The role assignment to the container registry uses the ACR Pull role.
+* Given a resource group, an Azure Kubernetes Cluster is deployed.
+* The Azure Container Registry (ACR) is used so that AKS can pull docker images of applications and may be deployed into the AKS cluster. 
+  * The role assignment from the AKS cluster to the container registry uses the ACR Pull role.
+* A Log Analytics workspace is used to collect metrics and logs from both the AKS resource and Azure Container resource. The diagnostic settings of each resource is configured to refernce the log analytics workspace
 
 ![aks-law-acr-diagram](aks-law-acr-tf.png)
 
@@ -9,4 +12,11 @@ Given a resource group, an Azure Kubernetes Cluster is deployed. Azure Container
 
 Resource Group
 ![alt text](aks-law-acr-rg-portal.png)
+
+Azure Kubernetes Service - Diagnostic Settings
+![alt text](aks-law-diag-portal.png)
+
+Azure Container Registry - Diagnostic Settings
+![alt text](acr-diag-portal.png)
+
 
