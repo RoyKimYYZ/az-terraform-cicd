@@ -8,7 +8,7 @@ This IAC deployment scenario is to demonstrate The Azure Verified Modules (AVM) 
 
 The terraform code is taken from https://registry.terraform.io/modules/Azure/avm-res-containerservice-managedcluster/azurerm/latest/examples/default
 
-![aks-law-acr-diagram](aks-law-acr-tf.png)
+<img src='aks-law-acr-tf.png' style='width:100%;max-width:500px;'>
 
 ## Azure Portal Deployment
 
