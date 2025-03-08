@@ -17,7 +17,7 @@ This repo is a series of my own code samples exhibiting various technical patter
 | [avm-aks-example2](/avm-aks-example2-tf)    | An AVM Azure Kubernetes with AVM Log Analytics Workspace and Azure Container Registry. Also with role assignment from AKS to ACR with ACR Pull role | ![](avm-aks-example2-tf/aks-law-acr-tf.png) |
 
 
-In the coming monhts, I plan to add more Infra-As-Code solutions in the form of azure terraform code.
+In the coming months, I plan to add more Infra-As-Code solutions in the form of azure terraform code.
 
 Feedback is welcome as I want to improve the style, organization and the manner of which I show these examples to help the tech community.
 
