@@ -134,11 +134,6 @@ module "avm-res-containerregistry-registry" {
     }
   }
 
-  # role_assignments = {
-  #     role_definition_id_or_name = "AcrPull"
-  #     principal_id         = module.avm-res-containerservice-managedcluster.kubelet_identity_id
-  # }
-
   diagnostic_settings = {
     to_la = {
       name                  = "to-la"
@@ -148,6 +143,7 @@ module "avm-res-containerregistry-registry" {
   
 }
 
+# Altnernative way to assign role to the ACR through azurerm_role_assignment module
 # resource "azurerm_role_assignment" "acr" {
 #   principal_id                     = module.avm-res-containerservice-managedcluster.kubelet_identity_id
 #   scope                            = module.avm-res-containerregistry-registry.resource_id
