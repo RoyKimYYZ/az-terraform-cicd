@@ -127,6 +127,13 @@ module "avm-res-containerregistry-registry" {
     system_assigned = true
   }
 
+  role_assignments = {
+    role_01 = {
+      principal_id               = module.avm-res-containerservice-managedcluster.kubelet_identity_id
+      role_definition_id_or_name = "AcrPull"
+    }
+  }
+
   # role_assignments = {
   #     role_definition_id_or_name = "AcrPull"
   #     principal_id         = module.avm-res-containerservice-managedcluster.kubelet_identity_id
@@ -141,12 +148,12 @@ module "avm-res-containerregistry-registry" {
   
 }
 
-resource "azurerm_role_assignment" "acr" {
-  principal_id                     = module.avm-res-containerservice-managedcluster.kubelet_identity_id
-  scope                            = module.avm-res-containerregistry-registry.resource_id
-  role_definition_name             = "AcrPull"
-  skip_service_principal_aad_check = true
-}
+# resource "azurerm_role_assignment" "acr" {
+#   principal_id                     = module.avm-res-containerservice-managedcluster.kubelet_identity_id
+#   scope                            = module.avm-res-containerregistry-registry.resource_id
+#   role_definition_name             = "AcrPull"
+#   skip_service_principal_aad_check = true
+# }
 
 output "resource_group_name" {
   value = azurerm_resource_group.this.name
