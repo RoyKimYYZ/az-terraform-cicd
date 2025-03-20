@@ -59,18 +59,18 @@ resource "random_integer" "region_index" {
 module "naming" {
   source  = "Azure/naming/azurerm"
   version = "~> 0.3"
-  suffix = [var.resource_name_suffix]
+  suffix = ["rk", "dev"]
 }
 
 # This is required for resource modules
 resource "azurerm_resource_group" "this" {
   location = var.location
-  name     = module.naming.resource_group.name
+  name     = module.naming.resource_group.name_unique
 }
 
 resource "azurerm_log_analytics_workspace" "this" {
   location            = azurerm_resource_group.this.location
-  name                = module.naming.log_analytics_workspace.name
+  name                = module.naming.log_analytics_workspace.name_unique
   resource_group_name = azurerm_resource_group.this.name
 }
 
@@ -113,11 +113,10 @@ module "avm-res-containerservice-managedcluster" { # avm-res-containerservice-ma
   }
 }
 
-
 module "avm-res-containerregistry-registry" {
   source  = "Azure/avm-res-containerregistry-registry/azurerm"
   version = "0.4.0"
-  name     = module.naming.container_registry.name
+  name     = module.naming.container_registry.name_unique
   location = azurerm_resource_group.this.location
   resource_group_name = azurerm_resource_group.this.name
 
@@ -159,6 +158,9 @@ output "location" {
   value = azurerm_resource_group.this.location
 }
 
+output "rg_name" {
+  value = module.naming.resource_group.name_unique
+}
 # output "avm-res-containerservice-managedcluster_name" {
 #   value = avm-res-containerservice-managedcluster.name
 # }
